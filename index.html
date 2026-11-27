@@ -1081,7 +1081,7 @@ function chooseLang(){
 
 /* ---------- الدرس ---------- */
 let L,step,sel,ordered,checked,xpGain,hearts,ranOk=false,lastOut='',fails=0;
-function startLesson(id){L=flat.find(l=>l.id===id);step=0;xpGain=0;hearts=3;render()}
+function startLesson(id){L=flat.find(l=>l.id===id);if(L.steps.some(s=>s.t==='run'))loadPy().catch(()=>{});step=0;xpGain=0;hearts=3;render()}
 function heartsTxt(){return ''}
 function render(){
   const s=L.steps[step];sel=null;ordered=[];checked=false;ranOk=false;lastOut='';fails=0;
@@ -1140,15 +1140,26 @@ function finish(){
 
 /* ---------- تشغيل بايثون (Pyodide) ---------- */
 let pyP=null;
+const PY_MIRRORS=['https://cdn.jsdelivr.net/pyodide/v0.26.4/full/','https://fastly.jsdelivr.net/pyodide/v0.26.4/full/','https://gcore.jsdelivr.net/pyodide/v0.26.4/full/','https://unpkg.com/pyodide@0.26.4/'];
+let pyErr='',pyMsg=null;
+function pyNote(t){if(pyMsg)pyMsg(t)}
+function withTimeout(p,ms,label){return new Promise((res,rej)=>{const t=setTimeout(()=>rej(new Error(label+' timeout')),ms);p.then(v=>{clearTimeout(t);res(v)},e=>{clearTimeout(t);rej(e)})})}
+function loadScript(src){return new Promise((res,rej)=>{const sc=document.createElement('script');sc.src=src;sc.onload=res;sc.onerror=()=>rej(new Error('script blocked'));document.head.appendChild(sc)})}
 function loadPy(){
   if(pyP)return pyP;
-  pyP=new Promise((res,rej)=>{
-    const sc=document.createElement('script');
-    sc.src='https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js';
-    sc.onload=async()=>{try{res(await loadPyodide())}catch(e){rej(e)}};
-    sc.onerror=()=>rej(new Error('offline'));
-    document.head.appendChild(sc);
-  });
+  pyP=(async()=>{
+    pyErr='';
+    for(let i=0;i<PY_MIRRORS.length;i++){
+      const base=PY_MIRRORS[i];
+      try{
+        pyNote(i);
+        await withTimeout(loadScript(base+'pyodide.js'),25000,'script');
+        const py=await withTimeout(loadPyodide({indexURL:base}),240000,'runtime');
+        return py;
+      }catch(e){pyErr+=(pyErr?' | ':'')+(new URL(base).hostname)+': '+(e&&e.message||e)}
+    }
+    throw new Error(pyErr);
+  })();
   pyP.catch(()=>{pyP=null});
   return pyP;
 }
@@ -1156,9 +1167,9 @@ const ERR={KeyError:'المفتاح مش موجود في القاموس. راج�
 const ERR_EN={KeyError:'That key is not in the dictionary. Check the exact spelling.',NameError:'Unknown name: maybe a typo, a variable you did not define, or missing quotes around text.',SyntaxError:'The statement is written wrongly: check brackets ( ), quotes, colons : and lowercase print.',IndentationError:'The spaces at the start of the line are wrong. Lines under if, for or def need 4 spaces.',TypeError:'Wrong type: maybe you mixed a number with text, or forgot int()/float() on input.',ValueError:'The value does not fit: usually text where a number is needed.',ZeroDivisionError:'You cannot divide by zero.',IndexError:'The index is bigger than the list. Counting starts at 0.',AttributeError:'That method does not exist for this type. Check its name.'};
 async function runCode(){
   const out=$('#out'),st=$('#pystat');
-  st.textContent=U('⏳ بيجهّز بايثون (أول مرة بياخد ثواني)...','⏳ Loading Python (a few seconds the first time)...');
+  pyMsg=i=>{st.textContent=U('⏳ بيحمّل بايثون (حوالي 12 ميجا، أول مرة بس، ممكن ياخد دقيقة على النت البطيء)...','⏳ Downloading Python (about 12 MB, first time only, can take a minute on slow internet)...')+(i>0?' ['+(i+1)+'/'+PY_MIRRORS.length+']':'')};pyMsg(0);
   let py;
-  try{py=await loadPy()}catch(e){st.textContent='';out.className='out err';out.textContent=U('مش قادر يحمّل بايثون. اتأكد إن النت شغال وجرّب تاني.','Could not load Python. Check your internet connection and try again.');ranOk=false;return}
+  try{py=await loadPy()}catch(e){st.textContent='';out.className='out err';out.textContent=U('مش قادر يحمّل بايثون. جرّب تضغط ▶ شغّل تاني، أو غيّر الشبكة (واي فاي أو داتا).','Could not load Python. Press ▶ Run again, or switch network (Wi-Fi or mobile data).')+'\n('+(e&&e.message||'')+')';ranOk=false;return}
   st.textContent='';
   let buf='';
   py.setStdout({batched:x=>buf+=x+'\n'});
