@@ -102,7 +102,32 @@ textarea.ed{width:100%;direction:ltr;text-align:left;min-height:170px;background
 .card:hover{border-color:var(--g)}.card .n{flex:none;width:34px;height:34px;border-radius:50%;background:#e6f2f1;color:var(--g);font-weight:bold;display:flex;align-items:center;justify-content:center}
 .card.done .n{background:var(--g);color:#fff}.card.lock{opacity:.5}.card .t{flex:1}.card .s{font-size:12px;color:var(--mute)}
 .opt,.go,.runbtn,.hintbtn,.tok,.chip2{border-radius:10px}.unit{border-radius:12px}.stat{background:#f1f5f9;border-color:#cbd5e1}.foot.ok{background:#dcfce7}.opt.ok{background:#dcfce7}.hintbox{background:#fef9e7}.hintbtn{background:#fef9e7}
-textarea.ed{white-space:pre;overflow:auto}</style>
+textarea.ed{white-space:pre;overflow:auto}[dir=ltr] .opt,[dir=ltr] .card,[dir=ltr] .hero{text-align:left}[dir=ltr] #app{direction:ltr}.errhelp{font-family:Tahoma,Arial,sans-serif}
+body{background:#f7f9fa}#app{max-width:none;background:transparent;overflow:visible}
+.tb{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:14px;padding:10px 16px;background:#1c1d1f;color:#fff}
+.tb .brand{font-weight:bold;font-size:18px;cursor:pointer;white-space:nowrap}.tb .tbt{flex:1;color:#d1d7dc;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;border-inline-start:1px solid #555;padding-inline-start:14px}
+.tb .tbp{display:flex;flex-direction:column;gap:3px;font-size:12px;min-width:110px}.pbar{height:6px;background:#555;border-radius:4px;overflow:hidden}.pbar i{display:block;height:100%;background:#5ec2b7}
+.tb .lg,.tb .menu{background:none;border:1px solid #888;color:#fff;border-radius:6px;padding:6px 12px;font-size:14px}.tb .menu{font-size:18px;padding:4px 10px;display:none}
+.chero{background:#1c1d1f;color:#fff;padding:30px 16px 36px}.chero .ci{max-width:1000px;margin:0 auto}.crumb{color:#5ec2b7;font-size:14px;margin-bottom:10px}
+.chero h1{margin:0 0 10px;font-size:32px}.chero .sub{font-size:18px;line-height:1.7;color:#e6e9ec;max-width:700px;margin:0 0 14px}.meta{display:flex;gap:16px;flex-wrap:wrap;font-size:14px;color:#d1d7dc;margin-bottom:18px}
+.cta{background:#a435f0;color:#fff;border:none;border-radius:6px;padding:14px 26px;font-size:17px;font-weight:bold}.cta:hover{background:#8710d8}
+.pbar.big{max-width:340px;margin-top:16px;height:8px}.chero small{color:#d1d7dc;display:block;margin-top:6px}
+.cwrap{max-width:1000px;margin:0 auto;padding:20px 16px 60px}.box{background:#fff;border:1px solid #d1d7dc;border-radius:8px;padding:18px 20px;margin-bottom:20px}.box h2{margin:0 0 12px;font-size:21px;color:#1c1d1f}
+.learn{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:8px 20px}.learn li{font-size:15px;line-height:1.6}
+.sec{border:1px solid #d1d7dc;border-radius:6px;margin-bottom:-1px;background:#fff}.sec summary{cursor:pointer;padding:12px 14px;background:#f7f9fa;list-style:none}.sec summary::-webkit-details-marker{display:none}.sec summary b{display:block;font-size:15px;color:#1c1d1f}.sec summary small{color:#6a6f73;font-size:12px}
+.li{display:flex;align-items:center;gap:10px;width:100%;background:#fff;border:none;border-top:1px solid #eee;padding:11px 14px;text-align:start;font-size:14px;color:#1c1d1f;margin:0;border-radius:0}.li:hover{background:#f7f9fa}.li .ic{width:20px;color:#6a6f73;flex:none;text-align:center}.li.done .ic{color:#0f766e;font-weight:bold}.li .lt{flex:1}.li .lt small{display:block;color:#6a6f73;font-size:12px}.li .du{color:#6a6f73;font-size:12px}.li.cur{background:#d9eeec;font-weight:bold}
+.shell{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:0;align-items:start;max-width:1400px;margin:0 auto}
+.side{position:sticky;top:56px;height:calc(100vh - 56px);overflow-y:auto;background:#fff;border-inline-start:1px solid #d1d7dc}.side .sh{padding:14px;font-weight:bold;font-size:17px;border-bottom:1px solid #d1d7dc}
+.main{padding:0 0 30px;min-width:0}.stage{background:linear-gradient(135deg,#1c1d1f,#0f3b3a);color:#fff;padding:22px 24px;min-height:150px;display:flex;flex-direction:column;justify-content:flex-end;gap:6px}
+.st1{font-size:13px;color:#5ec2b7}.st2{font-size:24px;font-weight:bold}.st3{font-size:12px;color:#d1d7dc}.scrub{height:5px;background:#555;border-radius:3px;overflow:hidden;margin-top:6px}.scrub i{display:block;height:100%;background:#a435f0;transition:width .3s}
+.player{background:#fff;border:1px solid #d1d7dc;border-radius:8px;margin:18px 20px 0;overflow:hidden}.player .body{padding:18px 24px 30px;max-width:800px}
+.player .foot{position:sticky;bottom:0;left:auto;right:auto;max-width:none;margin:0;border-radius:0}.go{max-width:420px}.foot .go{display:block}
+.fin{display:flex;flex-direction:column;gap:10px;align-items:center}.go.sec2{background:#fff;color:#1c1d1f;border:1px solid #1c1d1f;border-bottom-width:1px}
+.done-s{padding:40px 20px}.done-s .big{font-size:64px;color:#0f766e;animation:none}
+.hero,.top{display:none}.errhelp{direction:inherit;text-align:start}
+[dir=ltr] .opt{text-align:left}.opt{text-align:start}
+@media(max-width:900px){.shell{grid-template-columns:1fr}.side{position:fixed;top:56px;bottom:0;inset-inline-end:0;width:min(340px,88vw);height:auto;z-index:40;transform:translateX(110%);transition:transform .2s;box-shadow:-4px 0 14px rgba(0,0,0,.2)}[dir=rtl] .side{transform:translateX(-110%)}.side.open{transform:none!important}.tb .menu{display:block}.tb .tbt,.tb .tbp span{display:none}.tb .tbp{min-width:60px}.learn{grid-template-columns:1fr}.chero h1{font-size:25px}.player{margin:12px 8px 0}.player .body{padding:14px 14px 24px}.stage{padding:16px}.st2{font-size:20px}}
+</style>
 </head>
 <body>
 <div id="app"></div>
@@ -587,9 +612,13 @@ print(f"Total: {sum(buckets.values()):,}")`,check:(c,o)=>o.includes('Total: 68,5
 
 /* ---------- الحالة والحفظ ---------- */
 const KEY='pycareer.v1';
+const EN={"الوحدة 1: أساسيات بلغة المحاسب": "Unit 1: Basics, accountant style", "أرقام، نصوص، ومدخلات": "Numbers, text and input", "الأرقام والمتغيرات: حساب فاتورة": "Numbers and variables: calculating an invoice", "المتغيرات والحسابات": "Variables and calculations", "المتغير اسم نخزّن فيه قيمة. بايثون بتحسب زي الآلة الحاسبة: <code>+ - * /</code>.": "A variable is a name that holds a value. Python calculates like a calculator: <code>+ - * /</code>.", "النسبة 14% بنكتبها <code>0.14</code>.": "We write 14% as <code>0.14</code>.", "إيه ناتج الكود؟": "What does the code print?", "أنهي اسم متغير صحيح؟": "Which variable name is valid?", "فاتورة بقيمة 2500 جنيه. احسب ضريبة 14% والإجمالي واطبع الإجمالي": "An invoice of 2500 EGP. Calculate 14% VAT and the total, then print the total", "فاتورة 8000 عليها خصم 5% ثم ضريبة 14% على المبلغ بعد الخصم. اطبع الإجمالي النهائي": "An invoice of 8000 with a 5% discount, then 14% VAT on the discounted amount. Print the final total", "النصوص و f-string: تنسيق التقارير": "Text and f-strings: formatting reports", "اطبع تقرير شكله محترم": "Print a professional-looking report", "الـ f-string بتحط قيم المتغيرات جوه الجملة: حط <code>f</code> قبل العلامات وحط المتغير بين <code>{ }</code>.": "An f-string puts variable values inside a sentence: put <code>f</code> before the quotes and the variable between <code>{ }</code>.", "<code>{total:,.2f}</code> بتطبع الرقم بفاصل الآلاف ورقمين عشريين.": "<code>{total:,.2f}</code> prints the number with thousands separators and two decimals.", "إيه الناتج؟": "What is the output?", "كمّل عشان يطبع الرقم بفاصل الآلاف": "Complete it to print the number with thousands separators", "اطبع السطر ده بالظبط: Nile Co: 11,400.00 (باستخدام متغيرين و f-string)": "Print exactly this line: Nile Co: 11,400.00 (using two variables and an f-string)", "اطبع سطر فاتورة بالشكل: INV-001 | Nile Co | 11,400.00": "Print an invoice line in this format: INV-001 | Nile Co | 11,400.00", "input والأنواع: حاسبة تفاعلية": "input and types: an interactive calculator", "خد الأرقام من المستخدم": "Take numbers from the user", "<code>input()</code> بترجّع نص دايما. عشان تحسب لازم تحوّله: <code>float()</code> للأرقام العشرية و<code>int()</code> للصحيحة.": "<code>input()</code> always returns text. To calculate, convert it first: <code>float()</code> for decimals and <code>int()</code> for whole numbers.", "ليه الكود ده بيدّي خطأ؟": "Why does this code give an error?", "input بترجّع نص ومينفعش نضربه في رقم عشري": "input returns text, and you cannot multiply text by a decimal number", "الرقم كبير": "The number is too big", "نسينا print": "We forgot print", "مفيش خطأ": "There is no error", "اعمل برنامج بيسأل عن المبلغ ويطبع الضريبة 14% بتاعته": "Write a program that asks for the amount and prints its 14% VAT", "برنامج بيسأل عن المبلغ ونسبة الخصم (مثلا 10) ويطبع المبلغ بعد الخصم": "A program that asks for the amount and a discount percent (for example 10) and prints the amount after the discount", "الوحدة 2: قرارات وتكرار ودوال": "Unit 2: Decisions, loops and functions", "منطق التقارير": "Report logic", "الشروط: تصنيف الأعمار": "Conditions: classifying aging", "الشرط بيخلّي البرنامج يختار. <code>elif</code> معناها \"ولو لأ، جرّب ده\". الأسطر الداخلية لازم تبدأ بـ 4 مسافات.": "A condition lets the program choose. <code>elif</code> means \"otherwise, try this\". Inner lines must start with 4 spaces.", "مفيش": "Nothing", "كمّل الشرط: اطبع Overdue لو الأيام أكتر من 30": "Complete the condition: print Overdue if days are more than 30", "اسأل عن عدد أيام التأخير (رقم صحيح) واطبع الفئة: 0-30 أو 31-60 أو 61-90 أو 90+": "Ask for the number of days overdue (a whole number) and print the bucket: 0-30, 31-60, 61-90 or 90+", "حد الائتمان 100000. اسأل عن رصيد العميل، واطبع Over limit لو تخطّاه وإلا OK": "Credit limit is 100000. Ask for the customer balance and print Over limit if it exceeds the limit, otherwise OK", "الحلقات: مرور على الفواتير": "Loops: going through invoices", "for و sum": "for and sum", "<code>for</code> بتمشي على كل عنصر في القائمة. بنجمع في متغير بنبدأه بصفر.": "<code>for</code> walks through every item in the list. We add up in a variable that starts at zero.", "اجمع الفواتير دي واطبع الإجمالي: [12000, 8500, 23000, 4000, 15000, 6000]": "Add up these invoices and print the total: [12000, 8500, 23000, 4000, 15000, 6000]", "اطبع الفواتير اللي أكبر من 10000 بس، وبعدين اطبع عددها": "Print only invoices larger than 10000, then print how many there are", "الدوال: كود تعيد استخدامه": "Functions: code you can reuse", "def و return": "def and return", "الدالة بتلمّ منطق بتكرره. بتاخد مدخلات (parameters) وبترجّع نتيجة بـ <code>return</code>.": "A function wraps logic you repeat. It takes inputs (parameters) and gives back a result with <code>return</code>.", "كمّل الدالة": "Complete the function", "اكتب دالة with_vat(amount) بترجّع المبلغ شامل 14%، واطبع with_vat(1000)": "Write a function with_vat(amount) that returns the amount including 14%, and print with_vat(1000)", "اكتب دالة bucket(days) بترجّع الفئة (0-30 / 31-60 / 61-90 / 90+) واطبع bucket(75)": "Write a function bucket(days) that returns the bucket (0-30 / 31-60 / 61-90 / 90+) and print bucket(75)", "اختبار الوحدة 2": "Unit 2 quiz", "اختبار سريع": "Quick quiz", "5 أسئلة على الوحدتين 1 و2.": "5 questions on units 1 and 2.", "كام مرة هتتطبع؟": "How many times will it print?", "كمّل لتحويل المدخل لرقم عشري": "Complete it to convert the input to a decimal number", "الدالة اللي مفيهاش return بترجّع؟": "A function without a return gives back?", "None (لا شيء)": "None (nothing)", "نص فاضي": "Empty text", "خطأ": "An error", "الوحدة 3: البيانات": "Unit 3: Data", "قوائم وقواميس وتواريخ": "Lists, dictionaries and dates", "القواميس: رصيد كل عميل": "Dictionaries: each customer's balance", "القاموس (dict)": "The dictionary (dict)", "القاموس بيربط مفتاح بقيمة، مثلا اسم العميل برصيده. بنقرأ ونعدّل بالمفتاح.": "A dictionary links a key to a value, for example a customer name to a balance. We read and change values by key.", "اعمل قاموس لـ 3 عملاء بأرصدتهم واطبع كل عميل ورصيده بـ f-string": "Make a dictionary of 3 customers with balances and print each customer and balance with an f-string", "زوّد رصيد Nile Co بـ 5000 (فاتورة جديدة) واطبع الرصيد الجديد": "Increase Nile Co's balance by 5000 (a new invoice) and print the new balance", "قائمة قواميس: دفتر الفواتير": "A list of dictionaries: the invoice book", "كل فاتورة قاموس": "Each invoice is a dictionary", "البيانات الحقيقية غالبا قائمة صفوف، كل صف قاموس. دي شكل جدول Excel بالظبط.": "Real data is usually a list of rows, each row a dictionary. It looks exactly like an Excel table.", "اجمع مبالغ الفواتير المتأخرة أكتر من 60 يوم": "Add up the amounts of invoices more than 60 days overdue", "احسب إجمالي كل عميل (استخدم قاموس totals و get) واطبعه": "Calculate each customer's total (use a totals dictionary and get) and print it", "التواريخ: أيام التأخير": "Dates: days overdue", "تواريخ بايثون": "Python dates", "مكتبة <code>datetime</code> بتحسب الفرق بين تاريخين بالأيام. بنطرح تاريخ من تاريخ ونقول <code>.days</code>.": "The <code>datetime</code> library calculates the difference between two dates in days. Subtract one date from the other and use <code>.days</code>.", "إيه معنى (today - due).days؟": "What does (today - due).days mean?", "عدد الأيام بين التاريخين": "The number of days between the two dates", "اسم اليوم": "The name of the day", "الشهر": "The month", "السنة": "The year", "فاتورة استحقاقها 2026-09-15 واليوم 2026-11-27. اطبع عدد أيام التأخير": "An invoice due on 2026-09-15 and today is 2026-11-27. Print the number of days overdue", "اطبع فئة التأخير (استخدم if/elif على عدد الأيام): 73 يوم ← 61-90": "Print the overdue bucket (use if/elif on the days): 73 days gives 61-90", "ملفات CSV: قراءة بيانات حقيقية": "CSV files: reading real data", "قراءة جدول CSV": "Reading a CSV table", "ملفات Excel المحفوظة CSV بتتقرأ بمكتبة <code>csv</code>. هنا هنقرا النص مباشرة من متغير. على جهازك هتفتح الملف بـ <code>open(\"file.csv\")</code> بدل <code>io.StringIO</code>.": "Excel files saved as CSV are read with the <code>csv</code> library. Here we read text straight from a variable. On your own computer you would use <code>open(\"file.csv\")</code> instead of <code>io.StringIO</code>.", "<code>DictReader</code> بيحوّل كل صف لقاموس بأسماء الأعمدة. القيم بتيجي نص، حوّلها بـ int.": "<code>DictReader</code> turns each row into a dictionary using the column names. Values arrive as text, so convert them with int.", "ليه بنكتب int(row[\"amount\"])؟": "Why do we write int(row[\"amount\"])?", "القيم من CSV بتيجي نصوص": "Values from CSV arrive as text", "عشان الملف يتحفظ": "So the file gets saved", "عشان نرتّب": "So we can sort", "مفيش سبب": "No reason", "اقرا البيانات واطبع عدد الصفوف وإجمالي المبالغ": "Read the data and print the number of rows and the total amount", "اطبع فواتير Nile Co بس (اسم العميل ومبلغه)": "Print only the Nile Co invoices (customer name and amount)", "اختبار الوحدة 3": "Unit 3 quiz", "قبل المشروع النهائي.": "Before the final project.", "كمّل عشان تحسب الفرق بالأيام": "Complete it to calculate the difference in days", "csv.DictReader بترجّع كل صف كـ؟": "csv.DictReader gives each row as a?", "قاموس": "Dictionary", "قائمة أرقام": "List of numbers", "نص": "Text", "رقم": "Number", "قيمة amount اللي بتتقرا من CSV نوعها؟": "What type is the amount value read from a CSV?", "نص (str)": "Text (str)", "تاريخ": "Date", "المشروع النهائي": "Final project", "تقرير أعمار الديون": "AR aging report", "مشروع: تقرير أعمار الديون": "Project: the AR aging report", "هنبني تقرير aging كامل": "We will build a full aging report", "عندك ملف فواتير العملاء. المطلوب تقرير بيوضّح: إجمالي كل فئة تأخير، وإجمالي الديون، وأكبر عميل مدين.": "You have a file of customer invoices. The goal is a report showing: the total in each overdue bucket, the total receivables, and the biggest debtor.", "هنمشي خطوة خطوة، وكل خطوة بتبني على اللي قبلها.": "We will go step by step, and each step builds on the one before.", "الخطوة 1: اقرا الملف واطبع عدد الفواتير": "Step 1: read the file and print the number of invoices", "الخطوة 2: اكتب دالة bucket(days) واطبع bucket(45)": "Step 2: write a function bucket(days) and print bucket(45)", "الخطوة 3: اجمع المبالغ في كل فئة (قاموس buckets) واطبعه": "Step 3: add up the amounts in each bucket (a buckets dictionary) and print it", "الخطوة 4: اطبع أكبر عميل مدين (إجمالي كل عميل) بالشكل: Top debtor: Cairo Mills 23000": "Step 4: print the biggest debtor (total per customer) in this format: Top debtor: Cairo Mills 23000", "الخطوة 5 (التقرير النهائي): اطبع كل فئة بتنسيق f-string، وبعدين الإجمالي. لازم يظهر: Total: 68,500": "Step 5 (the final report): print each bucket with f-string formatting, then the total. It must show: Total: 68,500"};
 let S;
 try{S=JSON.parse(localStorage.getItem(KEY))||{}}catch(e){S={}}
 S.xp=S.xp||0;S.done=S.done||{};S.streak=S.streak||0;S.last=S.last||'';if(S.snd===undefined)S.snd=false;
+const LANG0=()=>S.lang||'';const tr=x=>S.lang==='en'&&EN[x]!==undefined?EN[x]:x;const U=(a,b)=>S.lang==='en'?b:a;
+function applyLang(){document.documentElement.lang=S.lang==='en'?'en':'ar';document.documentElement.dir=S.lang==='en'?'ltr':'rtl'}
+function setLang(l){S.lang=l;save();applyLang();home()}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
 const $=s=>document.querySelector(s);
 const app=$('#app');
@@ -598,8 +627,8 @@ function unlocked(i){return i===0||S.done[flat[i-1].id]}
 function esc(s){return s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}
 const LEVELS=[[0,'مبتدئ 🌱'],[80,'مبرمج صغير 🐣'],[200,'مبرمج شاطر 😎'],[400,'خبير بايثون 🧠'],[700,'أسطورة الكود 👑']];
 function level(){let i=0;LEVELS.forEach((l,k)=>{if(S.xp>=l[0])i=k});const lo=LEVELS[i][0],hi=LEVELS[i+1]?LEVELS[i+1][0]:lo+1;return{name:LEVELS[i][1],pct:LEVELS[i+1]?(S.xp-lo)/(hi-lo)*100:100,next:LEVELS[i+1]?hi-S.xp:0}}
-const PRAISE=['صح ✔','ممتاز','تمام، كده صح','شغل سليم'];
-const COMFORT=['مش دقيق، راجع الإجابة الصح','قريب. راجع التفاصيل','غلط بسيط، ده جزء من التعلم'];
+const PRAISE_AR=['صح ✔','ممتاز','تمام، كده صح','شغل سليم'],PRAISE_EN=['Correct ✔','Good','Right','Nice work'];
+const COMFORT_AR=['مش دقيق، راجع الإجابة الصح','قريب. راجع التفاصيل','غلط بسيط، ده جزء من التعلم'],COMFORT_EN=['Not quite. Check the correct answer','Close. Review the details','A small mistake, that is part of learning'];
 const rnd=a=>a[Math.floor(Math.random()*a.length)];
 
 /* ---------- صوت وكونفيتي ---------- */
@@ -610,20 +639,34 @@ function confetti(n){return;const e=['⭐','🎉','✨','🟢','🟡','🔵','�
 function toggleSnd(){S.snd=!S.snd;save();const b=$('#sndb');if(b)b.textContent=S.snd?'🔊':'🔇'}
 
 /* ---------- الشاشة الرئيسية ---------- */
+const mins=l=>Math.max(3,Math.round(l.steps.length*1.3));
+function topbar(){const total=flat.length,dn=flat.filter(l=>S.done[l.id]).length,pc=Math.round(dn/total*100);
+ return `<header class="tb"><button class="menu" id="menub" onclick="toggleSide()" aria-label="menu">☰</button><a class="brand" onclick="home()">🐍 PyCareer</a><span class="tbt">${U('بايثون للمحاسبين','Python for Accountants')}</span><div class="tbp"><span>${pc}% ${U('مكتمل','complete')}</span><div class="pbar"><i style="width:${pc}%"></i></div></div><button class="lg" onclick="setLang('${S.lang==='en'?'ar':'en'}')">${S.lang==='en'?'العربية':'English'}</button></header>`}
+function toggleSide(){const s=$('#side');if(s)s.classList.toggle('open')}
+function sidebar(cur){let idx=0;let h=`<aside class="side" id="side"><div class="sh">${U('محتوى الكورس','Course content')}</div>`;
+ UNITS.forEach((u,ui)=>{const has=u.lessons.some(l=>l.id===cur);const dn=u.lessons.filter(l=>S.done[l.id]).length;
+  h+=`<details class="sec" ${has||(!cur&&ui===0)?'open':''}><summary><b>${tr(u.title)}</b><small>${dn}/${u.lessons.length} · ${tr(u.sub)}</small></summary>`;
+  u.lessons.forEach(l=>{idx++;const d=S.done[l.id];h+=`<button class="li ${l.id===cur?'cur':''} ${d?'done':''}" onclick="startLesson('${l.id}')"><span class="ic">${d?'✔':l.id===cur?'▶':'○'}</span><span class="lt">${idx}. ${tr(l.title)}<small>${l.quiz?U('اختبار','Quiz'):l.id==='p1'?U('مشروع','Project'):U('درس','Lesson')} · ${mins(l)} ${U('دقيقة','min')}</small></span></button>`});
+  h+=`</details>`});
+ return h+`</aside>`}
+function shell(main,cur){app.innerHTML=topbar()+`<div class="shell"><main class="main">${main}</main>${sidebar(cur)}</div>`}
+function nextId(){const k=flat.findIndex(l=>!S.done[l.id]);return k<0?flat[0].id:flat[k].id}
 function home(){
+  if(!S.lang){return chooseLang()}
   const total=flat.length,dn=flat.filter(l=>S.done[l.id]).length;
-  let h=`<div class="top"><span class="chip">🐍 PyCareer</span><span class="chip">${dn}/${total} دروس</span></div>
-  <div class="hero"><h1>بايثون للمحاسبين</h1><p>كورس عملي بالعربي: من الأساسيات لحد مشروع تقرير أعمار الديون. كل درس 10-15 دقيقة، والكود بيتشغّل في المتصفح.</p><div class="lvlbar" style="margin-top:12px"><i style="width:${dn/total*100}%;background:var(--g)"></i></div></div>`;
+  const learn=[U('أساسيات بايثون: المتغيرات والأرقام والنصوص','Python basics: variables, numbers and text'),U('القوائم والقواميس والدوال','Lists, dictionaries and functions'),U('قراءة وتحليل بيانات CSV للفواتير','Reading and analysing invoice data (CSV)'),U('حسابات الضريبة والخصم والنسب','VAT, discount and percentage calculations'),U('مشروع نهائي: تقرير أعمار الديون','Final project: an AR aging report'),U('كود حقيقي بيتشغّل في المتصفح بدون تثبيت','Real code that runs in your browser, nothing to install')];
+  let h=`<div class="chero"><div class="ci"><div class="crumb">${U('تطوير مهني','Professional skills')} › ${U('محاسبة وبرمجة','Accounting and coding')}</div><h1>${U('بايثون للمحاسبين','Python for Accountants')}</h1><p class="sub">${U('كورس عملي من الصفر: أتمتة شغل المحاسبة بالكود، لحد ما تبني تقرير أعمار الديون بنفسك.','A practical course from zero: automate accounting work with code and build your own AR aging report.')}</p><div class="meta"><span>📚 ${total} ${U('درس','lessons')}</span><span>⏱ ${flat.reduce((a,l)=>a+mins(l),0)} ${U('دقيقة','min')}</span><span>🌐 العربية / English</span><span>🆓 ${U('مجاني بالكامل','Completely free')}</span></div><button class="cta" onclick="startLesson('${nextId()}')">${dn===0?U('ابدأ الكورس','Start course'):dn>=total?U('راجع الكورس','Review course'):U('كمّل من حيث وقفت','Continue where you left off')}</button><div class="pbar big"><i style="width:${dn/total*100}%"></i></div><small>${dn}/${total} ${U('مكتمل','complete')}</small></div></div>
+  <div class="cwrap"><section class="box"><h2>${U('هتتعلم إيه','What you will learn')}</h2><ul class="learn">${learn.map(x=>`<li>✔ ${x}</li>`).join('')}</ul></section>
+  <section class="box"><h2>${U('محتوى الكورس','Course content')}</h2>`;
   let idx=0;
-  UNITS.forEach(u=>{
-    h+=`<div class="mod">${u.title}<small>${u.sub}</small></div>`;
-    u.lessons.forEach((l,i)=>{
-      const k=idx++;const done=S.done[l.id],lock=!unlocked(k);
-      h+=`<button class="card ${done?'done':''} ${lock?'lock':''}" ${lock?'disabled':''} onclick="startLesson('${l.id}')"><span class="n">${done?'✔':k+1}</span><span class="t">${l.title}<div class="s">${l.quiz?'اختبار':l.id==='p1'?'مشروع':l.steps.length+' خطوات'}</div></span></button>`;
-    });
-  });
-  h+=`<div class="wm">التقدم محفوظ على نفس الجهاز والمتصفح</div>`;
-  app.innerHTML=h;window.scrollTo(0,0);
+  UNITS.forEach((u,ui)=>{h+=`<details class="sec" open><summary><b>${tr(u.title)}</b><small>${u.lessons.length} ${U('دروس','lessons')} · ${tr(u.sub)}</small></summary>`;
+   u.lessons.forEach(l=>{idx++;const d=S.done[l.id];h+=`<button class="li ${d?'done':''}" onclick="startLesson('${l.id}')"><span class="ic">${d?'✔':'▶'}</span><span class="lt">${idx}. ${tr(l.title)}<small>${l.quiz?U('اختبار','Quiz'):l.id==='p1'?U('مشروع','Project'):U('درس','Lesson')}</small></span><span class="du">${mins(l)} ${U('د','min')}</span></button>`});
+   h+=`</details>`});
+  h+=`</section><section class="box"><h2>${U('المتطلبات','Requirements')}</h2><p>${U('لا تحتاج أي خبرة برمجة. محتاج بس متصفح ونت (أول مرة).','No programming experience needed. Just a browser and internet (the first time).')}</p></section><div class="wm">${U('التقدم محفوظ على نفس الجهاز والمتصفح فقط','Progress is saved on this device and browser only')}</div></div>`;
+  app.innerHTML=topbar()+h;window.scrollTo(0,0);
+}
+function chooseLang(){
+  app.innerHTML=`<div class="hero" style="text-align:center;padding:60px 20px"><h1>🐍 PyCareer</h1><p>Python for Accountants<br>بايثون للمحاسبين</p><p style="margin-top:30px">Choose your language<br>اختار اللغة</p><button class="go" style="margin-top:14px" onclick="setLang('ar')">العربية</button><button class="go" style="margin-top:14px;background:var(--b);border-bottom-color:var(--bd)" onclick="setLang('en')">English</button></div>`;
 }
 
 /* ---------- الدرس ---------- */
@@ -634,27 +677,28 @@ function render(){
   const s=L.steps[step];sel=null;ordered=[];checked=false;ranOk=false;lastOut='';fails=0;
   let b='';
   if(s.t==='teach'){
-    b=`${s.e?`<div class="big-e">${s.e}</div>`:''}<h3>${s.h}</h3>${s.p.map(x=>`<p>${x}</p>`).join('')}${s.code?`<pre>${esc(s.code)}</pre>`:''}`;
+    b=`${s.e?`<div class="big-e">${s.e}</div>`:''}<h3>${tr(s.h)}</h3>${s.p.map(x=>`<p>${tr(x)}</p>`).join('')}${s.code?`<pre>${esc(s.code)}</pre>`:''}`;
   }else if(s.t==='mcq'){
-    b=`<h3>${s.q}</h3>${s.code?`<pre>${esc(s.code)}</pre>`:''}${s.opts.map((o,i)=>`<button class="opt ${s.ltr?'ltr':''}" id="o${i}" onclick="pick(${i})">${esc(o)}</button>`).join('')}`;
+    b=`<h3>${tr(s.q)}</h3>${s.code?`<pre>${esc(s.code)}</pre>`:''}${s.opts.map((o,i)=>`<button class="opt ${s.ltr?'ltr':''}" id="o${i}" onclick="pick(${i})">${esc(tr(o))}</button>`).join('')}`;
   }else if(s.t==='blank'){
     const c=esc(s.code).replace('___','<span class="blank" id="bl">&nbsp;&nbsp;&nbsp;&nbsp;</span>');
-    b=`<h3>${s.q}</h3><pre>${c}</pre><div class="chips">${s.opts.map((o,i)=>`<button class="chip2" id="o${i}" onclick="pickB(${i})">${esc(o)}</button>`).join('')}</div>`;
+    b=`<h3>${tr(s.q)}</h3><pre>${c}</pre><div class="chips">${s.opts.map((o,i)=>`<button class="chip2" id="o${i}" onclick="pickB(${i})">${esc(o)}</button>`).join('')}</div>`;
   }else if(s.t==='order'){
     const t=[...s.tokens].sort(()=>Math.random()-.5);
-    b=`<h3>${s.q}</h3><div class="answer" id="ans"></div><div class="tokens" id="toks">${t.map(x=>`<button class="tok">${esc(x)}</button>`).join('')}</div>`;
+    b=`<h3>${tr(s.q)}</h3><div class="answer" id="ans"></div><div class="tokens" id="toks">${t.map(x=>`<button class="tok">${esc(x)}</button>`).join('')}</div>`;
   }else if(s.t==='run'){
-    b=`<h3>${s.q}</h3><textarea class="ed" id="ed" wrap="off" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off">${esc(s.starter)}</textarea>
+    b=`<h3>${tr(s.q)}</h3><textarea class="ed" id="ed" wrap="off" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off">${esc(s.starter)}</textarea>
     <div class="tools"><button onclick="ins('    ')">⇥ Tab</button><button onclick="ins('(')">(</button><button onclick="ins(')')">)</button><button onclick="ins('&quot;')">"</button><button onclick="ins(':')">:</button><button onclick="ins('[')">[</button><button onclick="ins(']')">]</button></div>
-    <div><button class="runbtn" onclick="runCode()">▶ شغّل</button><button class="hintbtn" onclick="showHint()">💡 تلميح</button></div><div id="hintbox"></div><div class="out" id="out">النتيجة هتظهر هنا</div><div class="hint" id="pystat"></div>`;
+    <div><button class="runbtn" onclick="runCode()">▶ ${U('شغّل','Run')}</button><button class="hintbtn" onclick="showHint()">💡 ${U('تلميح','Hint')}</button></div><div id="hintbox"></div><div class="out" id="out">${U('النتيجة هتظهر هنا','The result appears here')}</div><div class="hint" id="pystat"></div>`;
   }
   const n=L.steps.length;
-  app.innerHTML=`<div class="lesson"><div class="bar"><button class="x" onclick="home()">✕</button><div class="prog"><i style="width:${step/n*100}%"></i></div><span></span></div><div class="body">${b}</div><div class="foot" id="foot"><button class="go" id="go" onclick="onGo()" ${(s.t==='teach'||s.t==='run')?'':'disabled'}>${s.t==='teach'?'يلا':'تحقق'}</button></div></div>`;
+  const ui=UNITS.findIndex(u=>u.lessons.includes(L));
+  shell(`<div class="stage"><div class="st1">${tr(UNITS[ui].title)}</div><div class="st2">${tr(L.title)}</div><div class="scrub"><i style="width:${(step+1)/n*100}%"></i></div><div class="st3">${U('الخطوة','Step')} ${step+1} / ${n}</div></div><div class="player"><div class="body">${b}</div><div class="foot" id="foot"><button class="go" id="go" onclick="onGo()" ${(s.t==='teach'||s.t==='run')?'':'disabled'}>${s.t==='teach'?U('يلا','Next'):U('تحقق','Check')}</button></div></div>`,L.id);
   if(s.t==='order')document.querySelectorAll('#toks .tok').forEach(el=>el.onclick=()=>tok(el,el.textContent));
   window.scrollTo(0,0);
 }
 function ins(t){const e=$('#ed');const a=e.selectionStart,z=e.selectionEnd;e.value=e.value.slice(0,a)+t+e.value.slice(z);e.focus();e.selectionStart=e.selectionEnd=a+t.length}
-function showHint(){const s=L.steps[step];$('#hintbox').innerHTML=`<div class="hintbox">💡 تلميح:<pre>${esc(s.hint)}</pre></div>`}
+function showHint(){const s=L.steps[step];$('#hintbox').innerHTML=`<div class="hintbox">💡 ${U('تلميح','Hint')}:<pre>${esc(s.hint)}</pre></div>`}
 function pick(i){if(checked)return;sel=i;document.querySelectorAll('.opt').forEach((e,j)=>e.classList.toggle('sel',i===j));$('#go').disabled=false}
 function pickB(i){if(checked)return;sel=i;document.querySelectorAll('.chip2').forEach((e,j)=>e.classList.toggle('sel',i===j));const bl=$('#bl');bl.textContent=L.steps[step].opts[i];bl.classList.add('f');$('#go').disabled=false}
 function tok(el,x){if(checked)return;el.disabled=true;el.style.opacity=.3;ordered.push(x);const b=document.createElement('button');b.className='tok';b.textContent=x;b.onclick=()=>{if(checked)return;ordered.splice(ordered.indexOf(x),1);b.remove();el.disabled=false;el.style.opacity=1;$('#go').disabled=ordered.length===0};$('#ans').appendChild(b);$('#go').disabled=false}
@@ -667,20 +711,21 @@ function onGo(){
   else if(s.t==='run'){const c=$('#ed').value;ok=!!(ranOk&&s.check(c,lastOut))}
   checked=true;
   const f=$('#foot');
-  if(ok){xpGain+=10;sOk();confetti(14);f.className='foot ok';f.innerHTML=`<div class="msg">${rnd(PRAISE)} +10 XP</div><button class="go" onclick="onGo()">كمّل</button>`}
+  if(ok){xpGain+=10;sOk();confetti(14);f.className='foot ok';f.innerHTML=`<div class="msg">${rnd(S.lang==='en'?PRAISE_EN:PRAISE_AR)} </div><button class="go" onclick="onGo()">${U('كمّل','Continue')}</button>`}
   else{
     sBad();
-    if(s.t==='run'){fails++;f.className='foot bad';f.innerHTML=`<div class="msg">${rnd(COMFORT)}<br><span style="font-size:15px">${ranOk?'الكود اشتغل بس الناتج مش زي المطلوب. اقرأ السؤال تاني.':'اضغط ▶ شغّل الأول وشوف النتيجة.'}</span></div><button class="go" onclick="retry()">جرّب تاني</button>`}
+    if(s.t==='run'){fails++;f.className='foot bad';f.innerHTML=`<div class="msg">${rnd(S.lang==='en'?COMFORT_EN:COMFORT_AR)}<br><span style="font-size:15px">${ranOk?U('الكود اشتغل بس الناتج مش زي المطلوب. اقرأ السؤال تاني.','The code ran but the output is not what was asked. Read the task again.'):U('اضغط ▶ شغّل الأول وشوف النتيجة.','Press ▶ Run first and check the result.')}</span></div><button class="go" onclick="retry()">${U('جرّب تاني','Try again')}</button>`}
     else{f.className='foot bad';
-      f.innerHTML=`<div class="msg">${rnd(COMFORT)}<br><span style="font-size:15px">الإجابة الصح متلوّنة بالأخضر</span></div><button class="go" onclick="onGo()">كمّل</button>`}}
+      f.innerHTML=`<div class="msg">${rnd(S.lang==='en'?COMFORT_EN:COMFORT_AR)}<br><span style="font-size:15px">${U('الإجابة الصح متلوّنة بالأخضر','The correct answer is shown in green')}</span></div><button class="go" onclick="onGo()">${U('كمّل','Continue')}</button>`}}
 }
-function retry(){checked=false;const f=$('#foot');f.className='foot';f.innerHTML=`<button class="go" id="go" onclick="onGo()">تحقق</button>`;if(fails>=2)showHint()}
+function retry(){checked=false;const f=$('#foot');f.className='foot';f.innerHTML=`<button class="go" id="go" onclick="onGo()">${U('تحقق','Check')}</button>`;if(fails>=2)showHint()}
 function next(){step++;if(step>=L.steps.length)return finish();render()}
 function finish(){
   const first=!S.done[L.id];S.done[L.id]=true;S.xp+=xpGain+(first?20:0);
   save();
   const dn=flat.filter(l=>S.done[l.id]).length;
-  app.innerHTML=`<div class="done-s"><div class="big">✔</div><h2>${L.id==='p1'?'خلّصت المشروع النهائي':'خلّصت الدرس'}</h2><p>${L.title}</p><div class="stats"><div class="stat">${dn}/${flat.length} دروس</div></div><div class="foot"><button class="go" onclick="home()">رجوع للمنهج</button></div></div>`;
+  const k=flat.indexOf(L),nx=flat[k+1];
+  shell(`<div class="player"><div class="done-s"><div class="big">✔</div><h2>${L.id==='p1'?U('خلّصت المشروع النهائي','Final project complete'):U('خلّصت الدرس','Lesson complete')}</h2><p>${tr(L.title)}</p><div class="stats"><div class="stat">${dn}/${flat.length} ${U('دروس','lessons')}</div></div><div class="fin">${nx?`<button class="go" onclick="startLesson('${nx.id}')">${U('الدرس التالي','Next lesson')}: ${tr(nx.title)}</button>`:''}<button class="go sec2" onclick="home()">${U('صفحة الكورس','Course page')}</button></div></div></div>`,L.id);
 }
 
 /* ---------- تشغيل بايثون (Pyodide) ---------- */
@@ -698,31 +743,32 @@ function loadPy(){
   return pyP;
 }
 const ERR={KeyError:'المفتاح مش موجود في القاموس. راجع الاسم بالظبط.',NameError:'اسم مش معروف: يمكن كتبته غلط، أو نسيت تعرّف المتغير، أو نسيت علامات " " حوالين الكلام.',SyntaxError:'الجملة مكتوبة غلط: راجع الأقواس ( ) وعلامات " " والنقطتين : وحروف print الصغيرة.',IndentationError:'المسافات في أول السطر مش مظبوطة. الأسطر اللي تحت if أو for أو def لازم تبدأ بـ 4 مسافات.',TypeError:'نوع غلط: ممكن بتجمع رقم مع كلام، أو نسيت int() على input.',ValueError:'القيمة مش مناسبة: غالبا كتبت كلام في مكان محتاج رقم.',ZeroDivisionError:'مينفعش نقسم على صفر!',IndexError:'رقم المكان أكبر من حجم القائمة. فاكر إن العد بيبدأ من 0.',KeyError:'المفتاح مش موجود.',AttributeError:'الأمر ده مش موجود للنوع ده. راجع اسمه.'};
+const ERR_EN={KeyError:'That key is not in the dictionary. Check the exact spelling.',NameError:'Unknown name: maybe a typo, a variable you did not define, or missing quotes around text.',SyntaxError:'The statement is written wrongly: check brackets ( ), quotes, colons : and lowercase print.',IndentationError:'The spaces at the start of the line are wrong. Lines under if, for or def need 4 spaces.',TypeError:'Wrong type: maybe you mixed a number with text, or forgot int()/float() on input.',ValueError:'The value does not fit: usually text where a number is needed.',ZeroDivisionError:'You cannot divide by zero.',IndexError:'The index is bigger than the list. Counting starts at 0.',AttributeError:'That method does not exist for this type. Check its name.'};
 async function runCode(){
   const out=$('#out'),st=$('#pystat');
-  st.textContent='⏳ بيجهّز بايثون (أول مرة بياخد ثواني)...';
+  st.textContent=U('⏳ بيجهّز بايثون (أول مرة بياخد ثواني)...','⏳ Loading Python (a few seconds the first time)...');
   let py;
-  try{py=await loadPy()}catch(e){st.textContent='';out.className='out err';out.textContent='مش قادر يحمّل بايثون. اتأكد إن النت شغال وجرّب تاني.';ranOk=false;return}
+  try{py=await loadPy()}catch(e){st.textContent='';out.className='out err';out.textContent=U('مش قادر يحمّل بايثون. اتأكد إن النت شغال وجرّب تاني.','Could not load Python. Check your internet connection and try again.');ranOk=false;return}
   st.textContent='';
   let buf='';
   py.setStdout({batched:x=>buf+=x+'\n'});
   py.setStderr({batched:x=>buf+=x+'\n'});
   const ask=window.__inputs;
-  py.setStdin({stdin:()=>{if(ask&&ask.length)return ask.shift();const r=window.prompt('اكتب إجابتك:');return r===null?'':r}});
+  py.setStdin({stdin:()=>{if(ask&&ask.length)return ask.shift();const r=window.prompt(U('اكتب إجابتك:','Type your answer:'));return r===null?'':r}});
   const code=$('#ed').value;
   try{
     await py.runPythonAsync(code);
-    out.className='out';out.textContent=buf||'(البرنامج اشتغل ومطبعش حاجة. استخدم print)';ranOk=true;lastOut=buf;
+    out.className='out';out.textContent=buf||U('(البرنامج اشتغل ومطبعش حاجة. استخدم print)','(The program ran but printed nothing. Use print)');ranOk=true;lastOut=buf;
   }catch(e){
     const m=String(e.message||e).split('\n').filter(x=>x.trim());const last=m[m.length-1];
     const ln=(String(e.message).match(/File "<exec>", line (\d+)/g)||[]).pop();
     const kind=(last.match(/^(\w+Error)/)||[])[1];
     out.className='out err';
-    out.innerHTML=(kind&&ERR[kind]?`<div class="errhelp">❗ ${ERR[kind]}${ln?' (في السطر '+ln.match(/\d+/)[0]+')':''}</div>`:'')+esc(buf)+esc(last);
+    out.innerHTML=(kind&&ERR[kind]?`<div class="errhelp" dir="${S.lang==='en'?'ltr':'rtl'}">❗ ${(S.lang==='en'?ERR_EN:ERR)[kind]}${ln?U(' (في السطر ',' (line ')+ln.match(/\d+/)[0]+')':''}</div>`:'')+esc(buf)+esc(last);
     ranOk=false;lastOut=buf;
   }
 }
-home();
+applyLang();home();
 </script>
 </body>
 </html>
